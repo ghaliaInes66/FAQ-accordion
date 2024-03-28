@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*colors*/
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+
+    /*font*/
+    --font-size: 16px;
+    --font-family: "Work Sans" , sans-serif;
+    --font-weight:400;
+    --font-weight-med:600;
+    --font-weight-bold:700;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    justify-items: center;
+    background-color:  var(--Light-pink);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+main{
+    width: 40%;
+    padding: 30px;
+    margin-top:100px ;
+    margin-bottom:50px ;
+    background-color: var(--White);
+    border-radius: 15px;
+    display: grid;
+    gap: 30px;
+}
+
+.q{
+    border-bottom: 1px solid var(--Light-pink);
+    padding-bottom:20px ;
+}
+
+.q:nth-child(5){
+    border-bottom:none;
+    padding-bottom:0;
+}
+
+.title{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.question{
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    gap: 10px;
+    align-items: center;
+}
+
+h1,h5{
+    color: var(--Dark-purple);
+}
+
+h1{
+    font-weight: var(--font-weight-bold);
+    font-size: 3rem;
+}
+
+h5{
+    transition: all 0.15s;
+    font-weight: var(--font-weight-med);
+    font-size: .9rem;
+}
+
+h5:hover{
+   color: var(--Grayish-purple);
+}
+
+.q p{
+    color: var(--Grayish-purple);
+    font-size: .9rem;
+    display: none;
+    margin-top: 20px;
+}
+
+.plus-icon , .minus-icon{
+    cursor: pointer;
+}
+
+.minus-icon{
+    display: none;
+}
+
+@media (max-width:1230px) {
+    main{
+        width: 50%;
+    }
+}
+
+@media (max-width:950px) {
+    main{
+        width: 60%;
+    }
+}
+
+@media (max-width:780px) {
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+    main{
+        width: 70%;
+    }
+}
+
+@media (max-width:550px) {
+    main{
+        width: 90%;
+        padding: 15px;
+    }
+}
